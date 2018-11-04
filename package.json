@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Let a browser connect to the syncplay middleware server",
   "scripts": {
-    "start": "serve"
+    "start": "serve src/"
   },
   "author": "marissaChan",
   "license": "MIT",
