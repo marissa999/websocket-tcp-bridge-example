@@ -1,0 +1,13 @@
+{
+  "name": "websocket-tcp-bridge-example",
+  "version": "0.0.1",
+  "description": "Let a browser connect to the syncplay middleware server",
+  "scripts": {
+    "start": "serve"
+  },
+  "author": "marissaChan",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^10.0.2"
+  }
+}

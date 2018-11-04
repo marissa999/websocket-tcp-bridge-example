@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>Syncplay Client</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+		<script src="middlewareConnect.js"></script>
+		<script src="client.js" defer></script>
+	</head>
+	<body>
+		<!-- Settings for connection -->
+		<form id="settingsForm">
+			<ul>
+				<!-- Middleware settings -->
+				<li>
+					<h1>Middleware Settings</h1>
+				</li>
+				<!-- Server address -->
+				<li>
+					<label for="settingsMiddlewareHostname">Hostname</label>
+					<input name="settingsMiddlewareHostname"
+						id="settingsMiddlewareHostname"
+						type="text"
+						value="http://localhost" />
+				</li>
+				<!-- Port -->
+				<li>
+					<label for="settingsMiddlewarePort">Port</label>
+					<input name="settingsMiddlewarePort" 
+						id="settingsMiddlewarePort" 
+						type="text"
+						value="3000" />
+				</li>
+				<!-- Endpoint Server settings -->
+				<li>
+					<h1>Endpoint Settings</h1>
+				</li>
+				<!-- Server address -->
+				<li>
+					<label for="settingsEndpointHostname">Hostname</label>
+					<input name="settingsEndpointHostname"
+						id="settingsEndpointHostname"
+						type="text"
+						value="syncplay.pl" />
+				</li>
+				<!-- Server port -->
+				<li>
+					<label for="settingsEndpointPort">Port</label>
+					<input name="settingsEndpointPort" 
+						id="settingsEndpointPort" 
+						type="text"
+						value="8997" />
+				</li>
+				<li>
+					<input name="connectNow" type="submit" value="Connect">
+				</li>
+			</ul>
+		</form>
+		<!-- Send and receive messages -->
+		<form id="connectionForm">
+			<ul>
+				<li>
+					<div id="sendMessageDiv">
+						<input type="text" id="sendMessageText" name="sendMessageText"><br>
+						<input name="sendNow" type="submit" value="Send message">
+					</div>
+				</li>
+				<li>
+				<textarea id="logs"
+						rows="10"
+						cols="100"
+						readonly></textarea>			
+				</li>
+			</ul>
+		</form>
+	</body>
+<html>
